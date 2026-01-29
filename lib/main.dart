@@ -4,6 +4,9 @@ import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pulse_mark/common/colors.dart' as app_colors;
 import 'package:pulse_mark/db_pulse_mark/data.dart';
+import 'package:pulse_mark/pages/pulse_mark_auth/pulse_mark_auth_binding.dart';
+import 'package:pulse_mark/pages/pulse_mark_auth/pulse_mark_auth_view.dart';
+import 'package:pulse_mark/pages/pulse_mark_camera/pulse_mark_camera_call.dart';
 import 'package:pulse_mark/pages/pulse_mark_tab/pulse_mark_tab_view.dart';
 import 'package:pulse_mark/pages/pulse_mark_tab/pulse_mark_tab_binding.dart';
 import 'package:pulse_mark/pages/pulse_mark_camera/pulse_mark_camera_view.dart';
@@ -56,9 +59,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           getPages: PMarks,
-          initialRoute: isFirstLaunch
-              ? '/pulse_mark_onboarding'
-              : '/pulse_mark_tab',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: app_colors.primaryColor,
@@ -113,6 +114,11 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> PMarks = [
   GetPage(
+    name: '/',
+    page: () => const PulseMarkAuthView(),
+    binding: PulseMarkAuthBinding(),
+  ),
+  GetPage(
     name: '/pulse_mark_tab',
     page: () => const PulseMarkTabView(),
     binding: PulseMarkTabBinding(),
@@ -121,6 +127,10 @@ List<GetPage<dynamic>> PMarks = [
     name: '/pulse_mark_camera',
     page: () => const PulseMarkCameraView(),
     binding: PulseMarkCameraBinding(),
+  ),
+  GetPage(
+    name: '/pulse_mark_call',
+    page: () => const PulseMarkCameraCall(),
   ),
   GetPage(
     name: '/pulse_mark_watermark_select',

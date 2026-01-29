@@ -11,8 +11,8 @@ class PulseMarkAuthView extends GetView<PulseMarkAuthLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.lvizxe.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.rczgpin.value
+              ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class PulseMarkAuthView extends GetView<PulseMarkAuthLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.dwuzj();
+              controller.wkczq();
             },
             icon: const Icon(
               Icons.restart_alt,

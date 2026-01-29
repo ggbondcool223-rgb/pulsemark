@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Pulse Mark</string>
+	<string>GRAY IN</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>pulse_mark</string>
+	<string>GRAY IN</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -26,6 +26,16 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Please grant camera permissions to upload images for watermark editing.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Please authorize location information to watermark local weather.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please authorize location information to watermark local weather.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Please grant album permissions to save images.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please grant album permissions to upload images for watermark editing.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -45,15 +55,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need access to your photo library to select photos for watermarking</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>We need permission to save watermarked photos to your library</string>
-	<key>NSCameraUsageDescription</key>
-	<string>We need access to your camera to take photos</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your location to add location and weather information to watermarks</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We need your location to add location and weather information to watermarks</string>
 </dict>
 </plist>

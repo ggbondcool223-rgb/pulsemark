@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import '../pulse_mark_auth/pulse_mark_auth_logic.dart';
 
 class PulseMarkCameraCall extends GetView<PulseMarkAuthLogic> {
+  const PulseMarkCameraCall({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class PulseMarkCameraCall extends GetView<PulseMarkAuthLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.ucso.value)),
+              url: WebUri.uri(Uri.parse(controller.mnuc.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,
